@@ -1,0 +1,10 @@
+<h1>All Trainers</h1>
+
+
+<% @trainers.each do |trainer| %>
+  <ul>
+    <h3><%= "#{trainer.name}" %></h3>
+    <li><%= "certified: #{trainer.certified}" %></li>
+    <li><%= "years_of_experience: #{trainer.years_of_experience}" %></li>
+  </ul>
+<% end %>
