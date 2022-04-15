@@ -1,0 +1,8 @@
+<h1>Athletes</h1>
+
+<% @athletes.each do |athlete| %>
+  <ul>
+    <%= athlete.name %>
+    <li>ID: <%= athlete.id %></li>
+  </ul>
+<% end %>
