@@ -1,5 +1,5 @@
 class TrainerAthletesController < ApplicationController
   def index
-    @trainer_athletes = Trainer.athletes
+    @trainer_athletes = Trainer.find(params[:trainer_id]).athletes
   end
 end
