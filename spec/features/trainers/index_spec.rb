@@ -11,10 +11,15 @@ RSpec.describe 'Trainers index' do
   it 'renders all trainers' do
     trainers.each do |trainer|
       expect(page).to have_content(trainer.name)
+      expect(page).to have_content(trainer.created_at)
     end
   end
 
   it 'has title All Trainers' do
     expect(page).to have_content(/All Trainers/)
+  end
+
+  it 'displays the Trainers by most recently created' do
+    expect(trainers.last.name).to appear_before(trainers.first.name)
   end
 end

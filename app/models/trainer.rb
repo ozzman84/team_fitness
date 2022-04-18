@@ -5,4 +5,6 @@ class Trainer < ApplicationRecord
   validates :name, length: { minimum: 3 }
   validates :certified, inclusion: { in: [true, false] }
   validates :years_of_experience, numericality: { greater_than: 0, less_than: 150 }
+
+  scope :recently_created, -> { order(created_at: :desc) }
 end
