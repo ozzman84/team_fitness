@@ -3,7 +3,8 @@
 <% @trainers.each do |trainer| %>
   <ul>
     <h3><%= "#{trainer.name}" %></h3>
-    <li><%= "certified: #{trainer.certified}" %></li>
-    <li><%= "years_of_experience: #{trainer.years_of_experience}" %></li>
+    <li><%= "Certified: #{trainer.certified}" %></li>
+    <li><%= "Years of Experience: #{trainer.years_of_experience}" %></li>
+    <li><%= "Date Created: #{trainer.created_at}" %></li>
   </ul>
 <% end %>

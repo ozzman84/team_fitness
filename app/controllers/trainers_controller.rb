@@ -1,6 +1,6 @@
 class TrainersController < ApplicationController
   def index
-    @trainers = Trainer.all
+    @trainers = Trainer.recently_created
   end
 
   def show

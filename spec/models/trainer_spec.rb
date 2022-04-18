@@ -13,4 +13,12 @@ RSpec.describe Trainer, type: :model do
     it { should have_db_column(:certified).of_type(:boolean) }
     it { should validate_numericality_of(:years_of_experience).is_greater_than(0).is_less_than(150) }
   end
+
+  describe 'methods' do
+    let!(:trainers) { create_list(:trainer, 3) }
+
+    it 'orders Trainers by most recently created' do
+      expect(Trainer.recently_created.first).to eq(trainers.last)
+    end
+  end
 end

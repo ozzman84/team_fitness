@@ -21,4 +21,8 @@ describe "Trainer's Athletes Index" do
   it 'does not display last trainers athletes' do
     expect(page).to_not have_content(other_athletes.name)
   end
+
+  it 'displays the number of athletes for that trainer' do
+    expect(page).to have_content(athletes.length)
+  end
 end
