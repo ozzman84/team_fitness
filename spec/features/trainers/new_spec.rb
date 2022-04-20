@@ -22,14 +22,4 @@ describe 'Trainers New View' do
       expect(page).to have_content(Trainer.last.name)
     end
   end
-
-  # =begin
-  # #add link to index view to create new Trainer
-  # #first edit routes
-  # #add new to Trainers TrainersController
-  # #add create to TrainersController
-  # #add strong params
-  # #Add create to params with error messaging
-  # #Create view with form data
-  # =end
 end
