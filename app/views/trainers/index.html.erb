@@ -1,5 +1,6 @@
 <h1>All Trainers</h1>
 
+<%= link_to 'Create Trainer', '/trainers/new' %>
 <% @trainers.each do |trainer| %>
   <ul>
     <h3><%= "#{trainer.name}" %></h3>
